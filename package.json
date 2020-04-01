@@ -8,14 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hungnguyen0545/.git"
+    "url": "git+https://github.com/hungnguyen0545/demoGulp.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hungnguyen0545/demoGulp/issues"
-  },
-  "homepage": "https://github.com/hungnguyen0545/demoGulp#readme",
   "devDependencies": {
     "autoprefixer": "^9.7.5",
     "browser-sync": "^2.26.7",
