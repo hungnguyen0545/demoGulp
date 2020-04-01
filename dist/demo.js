@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".fancybox-button").fancybox({prevEffect:"none",nextEffect:"none",closeBtn:!0,helpers:{title:{type:"inside"},buttons:{}}})});
