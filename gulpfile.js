@@ -2,7 +2,8 @@ var {src,dest,series,parallel,watch} = require('gulp');
 var autoprefixer =  require("autoprefixer");
 var sourcemaps = require("gulp-sourcemaps");
 var postcss = require("gulp-postcss");
-var cssnano = require('gulp-cssnano');//minify the concatenated CSS file
+// var cssnano = require('gulp-cssnano');//minify the concatenated CSS file
+var minifyCSS = require('gulp-minify-css');
 var uglify = require("gulp-uglify");
 var imagemin = require('gulp-imagemin')
 var browserSync = require('browser-sync').create();
@@ -21,7 +22,8 @@ function cssTask()
 {
     return src(files.cssPath)
             .pipe(sourcemaps.init())
-            .pipe(postcss([ autoprefixer, cssnano ]))
+           // .pipe(postcss([ autoprefixer, cssnano ]))
+           .pipe(minifyCSS({keepSpecialComments : 1}))
             .pipe(sourcemaps.write('.'))
             .pipe(dest('dist'))
             .pipe(browserSync.stream())
